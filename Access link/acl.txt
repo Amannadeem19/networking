@@ -1,0 +1,29 @@
+If you want to add permission on the generated area of traffic inbound access:
+then use, standard access method
+
+for the PC you want to restrict,
+access-list 1-129
+
+go to the other network router ,
+1. enable
+2. configure terminal 
+3. access-list 9 deny 192.168.1.1 0.0.0.0
+4. access-list 9 permit any
+
+Go inside the interface of Router outbound:
+5. interface fa0/1
+6. ip access-group 9 out
+
+
+FOR extended acl 100-199
+
+work on Source's own router
+
+1. enable
+2. configure terminal
+3. Router(config)#access-list 102 deny tcp 192.168.1.2 0.0.0.0 192.168.2.4 0.0.0.0 eq 80
+4. Router(config)#access-list 102 permit tcp any any
+5. use inbound interface of interface fa0/0
+6. ip access-group 102 in
+
+

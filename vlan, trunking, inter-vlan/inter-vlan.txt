@@ -1,0 +1,25 @@
+use the router to communicates with different Vlan like in my example vlan 10 and vlan 20
+
+
+Route half the interface and used them separately
+
+like in the router interface fa0/0
+we do separate configuration of lan 10 by:
+
+interface fa0/0.10
+encapsulation dot1Q 10
+default gateway
+ip address 10.0.0.3 255.0.0.0
+no sh for on the gateway
+
+
+now, create the trunk link
+In switch,
+
+1. interface fa0/5 
+switchport mode trunk
+
+in Router,
+
+interface fa0/0
+switchport mode trunk

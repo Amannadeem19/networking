@@ -1,0 +1,23 @@
+Go to Router:
+
+1. configure terminal
+2. enable password aman
+3. exit
+4 .Router#: write memory
+5. exit
+6. configure terminal
+7. line vty 0 15
+8. password aman
+9. login
+10 . Router#: write memory
+11. sh ru (for checking)
+
+
+after configuration go to any PC
+
+1. go to command line too
+2. ping router IP
+3. telnet router Ip
+4. enter password
+5. enable
+6.enter password

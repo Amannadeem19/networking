@@ -1,0 +1,27 @@
+VLAN:
+
+1. enable
+2. configure terminal
+3. vlan 10
+4. name blue
+5. exit
+
+assigning interfaces to vlan 10
+6. interface fa0/1
+7. switchport mode access
+8.switchport access vlan 10
+ 
+exit given next interface 
+
+for checking vlan
+
+do show vlan
+
+to create the truck link between the switches:
+1. go inside the interface eg: fa0/3 both side of the swtiches
+2. switchport mode trunk
+
+
+to check the trunk mode is on:
+
+1.show interface trunk

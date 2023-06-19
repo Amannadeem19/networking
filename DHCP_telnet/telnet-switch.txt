@@ -1,0 +1,18 @@
+1. enable
+2. configure terminal
+3. hostname aman
+4. enable password aman
+5. line vty 0 15
+6. password aman
+7. transport input telnet
+8. login
+9. exit
+10. interface vlan 1
+11. ip address 10.0.0.0 255.0.0.0
+12. no shutdown
+13. end
+go to any pc
+1. telnet ip of telnet
+2. password
+3. enable
+4. password
